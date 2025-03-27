@@ -1,0 +1,15 @@
+@model Product
+
+<h2>新增產品</h2>
+
+<form asp-action="Create">
+    <label>產品名稱</label>
+    <input asp-for="Name" />
+
+    <label>價格</label>
+    <input asp-for="Price" />
+
+    <button type="submit">新增</button>
+</form>
+
+<a asp-action="Index">返回列表</a>

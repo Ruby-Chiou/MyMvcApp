@@ -1,0 +1,17 @@
+@model Product
+
+<h2>編輯產品</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    
+    <label>產品名稱</label>
+    <input asp-for="Name" />
+
+    <label>價格</label>
+    <input asp-for="Price" />
+
+    <button type="submit">儲存變更</button>
+</form>
+
+<a asp-action="Index">返回列表</a>

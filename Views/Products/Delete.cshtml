@@ -1,0 +1,12 @@
+@model Product
+
+<h2>確認刪除</h2>
+
+<p>確定要刪除 @Model.Name 嗎？</p>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">刪除</button>
+</form>
+
+<a asp-action="Index">返回列表</a>

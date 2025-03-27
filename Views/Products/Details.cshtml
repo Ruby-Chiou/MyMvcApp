@@ -1,0 +1,9 @@
+@model Product
+
+<h2>產品詳情</h2>
+
+<p>名稱：@Model.Name</p>
+<p>價格：@Model.Price</p>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">編輯</a> |
+<a asp-action="Index">返回列表</a>
