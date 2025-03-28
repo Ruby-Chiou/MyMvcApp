@@ -6,23 +6,14 @@ using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 namespace MyMvcApp.Controllers;
 
-public class HomeController : Controller
+public class HomeController(ApplicationDbContext context) : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-    private readonly ApplicationDbContext _context;
-    public HomeController(ApplicationDbContext context)
-    {
-            _context = context;
-    }
+    private readonly ApplicationDbContext _context = context;
 
     public async Task<IActionResult> Index()
     {
         var products = await _context.Products.ToListAsync();
         return View(products);
-    }
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
     }
 
 

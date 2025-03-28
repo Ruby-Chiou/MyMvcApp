@@ -1,17 +1,49 @@
 @model Product
 
-<h2>編輯產品</h2>
+@{
+    ViewData["Title"] = "Edit";
+}
 
-<form asp-action="Edit">
-    <input type="hidden" asp-for="Id" />
-    
-    <label>產品名稱</label>
-    <input asp-for="Name" />
+<h1>Edit</h1>
 
-    <label>價格</label>
-    <input asp-for="Price" />
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
 
-    <button type="submit">儲存變更</button>
-</form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
-<a asp-action="Index">返回列表</a>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

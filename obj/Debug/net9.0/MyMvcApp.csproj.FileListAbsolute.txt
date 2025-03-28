@@ -316,3 +316,4 @@ C:\Users\ASUS\MyMvcApp\obj\Debug\net9.0\refint\MyMvcApp.dll
 C:\Users\ASUS\MyMvcApp\obj\Debug\net9.0\MyMvcApp.pdb
 C:\Users\ASUS\MyMvcApp\obj\Debug\net9.0\MyMvcApp.genruntimeconfig.cache
 C:\Users\ASUS\MyMvcApp\obj\Debug\net9.0\ref\MyMvcApp.dll
+C:\Users\ASUS\MyMvcApp\obj\Debug\net9.0\MyMvcApp.sourcelink.json
