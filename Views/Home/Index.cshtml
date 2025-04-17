@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<MyMvcApp.Models.Product>
-
+<h1>Welcome to MyMvcApp 12130906</h1>
+<h4>這些資料是從postgres database來的</h4>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,6 @@
     <section>
         <table border="1" cellspacing="0" cellpadding="5">
             <tr>
-                <th>ID</th>
                 <th>產品名稱</th>
                 <th>描述</th>
                 <th>價格</th>
@@ -25,7 +25,6 @@
             @foreach (var product in Model)
             {
                 <tr>
-                    <td>@product.Id</td>
                     <td>@product.Name</td>
                     <td>@product.Description</td>
                     <td>@product.Price</td>
