@@ -1,1 +1,11 @@
 "bin/\nobj/\n*.log\n*.tmp\nnode_modules/" 
+bin/
+obj/
+*.user
+*.suo
+*.db
+*.mdf
+*.ldf
+appsettings.Development.json
+appsettings.*.json
+.env
