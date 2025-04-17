@@ -1,30 +1,22 @@
 ﻿@model IEnumerable<MyMvcApp.Models.Product>
 
-<div style="text-align: center;">
-    <h1 class="display-4">Welcome tbody MyMvcApp 12130906</h1>
+<div style="text-align: center">
+    <h1 class="display-4">Welcome to MyMvcApp 12130906</h1>
     <h4>這些資料是從 Postgres Database 資料庫來的</h4>
 
     <table class="table">
         <thead>
             <tr>
-
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Description)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Price)
-                </th>
-                <th></th>
+                <th>產品名稱</th>
+                <th>描述</th>
+                <th>價格</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
                 <tr>
-
+                    
                     <td>
                         @Html.DisplayFor(modelItem => item.Name)
                     </td>
