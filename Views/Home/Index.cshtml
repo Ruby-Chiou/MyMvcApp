@@ -1,36 +1,43 @@
 ﻿@model IEnumerable<MyMvcApp.Models.Product>
-<h1>Welcome to MyMvcApp 12130906</h1>
-<h4>這些資料是從postgres database來的</h4>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>產品清單</title>
-</head>
-<body>
-    <header>
-        <h1>產品清單</h1>
-        <!-- Banner 區塊，連結至新增產品頁面 -->
-        <div style="background-color: #f2f2f2; padding: 20px; text-align: center;">
-            <a href="/Products/Create" style="font-size: 20px; text-decoration: none; color: #007ACC;">新增產品</a>
-        </div>
-    </header>
-    <section>
-        <table border="1" cellspacing="0" cellpadding="5">
-            <tr>
-                <th>產品名稱</th>
-                <th>描述</th>
-                <th>價格</th>
-            </tr>
-            @foreach (var product in Model)
-            {
+
+<div class "text-Center">
+    <h1 class="display-4">Welcome to MyMvcApp 12130906</h1>
+    <h4>這些資料是從postgres database來的</h4>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>產品清單</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>產品清單</h1>
+            <!-- Banner 區塊，連結至新增產品頁面 -->
+            <div style="background-color: #f2f2f2; padding: 20px; text-align: center;">
+                <a href="/Products/Create" style="font-size: 20px; text-decoration: none; color: #007ACC;">新增產品</a>
+            </div>
+        </header>
+        <section>
+            <table border="1" cellspacing="0" cellpadding="5">
                 <tr>
-                    <td>@product.Name</td>
-                    <td>@product.Description</td>
-                    <td>@product.Price</td>
+                    <th>產品名稱</th>
+                    <th>描述</th>
+                    <th>價格</th>
                 </tr>
-            }
-        </table>
-    </section>
-</body>
-</html>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Description</td>
+                        <td>@product.Price</td>
+                    </tr>
+                }
+            </table>
+        </section>
+    </body>
+
+    </html>
+</div>
